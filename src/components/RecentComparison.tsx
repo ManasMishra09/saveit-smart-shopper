@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowDown, ArrowTrendingDown } from "lucide-react";
+import { ArrowDown, TrendingDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -81,7 +81,7 @@ const RecentComparison: React.FC<RecentComparisonProps> = ({
         </div>
         
         <div className="bg-saveit-accent-purple/20 px-2 py-1 rounded-lg flex items-center">
-          <ArrowTrendingDown size={14} className="text-saveit-accent-purple" />
+          <TrendingDown size={14} className="text-saveit-accent-purple" />
           <span className="ml-1 text-xs font-medium text-saveit-accent-purple">
             {savingPercentage}% off
           </span>
