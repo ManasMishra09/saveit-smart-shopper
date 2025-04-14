@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				saveit: {
+					'neon-green': '#39FF14',
+					'bright-blue': '#00FFFF',
+					'dark-bg': '#121212',
+					'card-bg': '#1E1E1E',
+					'accent-purple': '#8B5CF6'
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-neon': {
+					'0%, 100%': { 
+						opacity: '1',
+						filter: 'brightness(1) drop-shadow(0 0 8px #39FF14)'
+					},
+					'50%': { 
+						opacity: '0.8',
+						filter: 'brightness(0.8) drop-shadow(0 0 2px #39FF14)'
+					},
+				},
+				'slide-up': {
+					'0%': {
+						transform: 'translateY(20px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
+				'slide-up': 'slide-up 0.4s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif']
 			}
 		}
 	},
